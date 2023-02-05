@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+VR-Educational-System/ComputerBuild/*
+*Documentation*
+*DemoAsteroids*
+*Demos*
+*.png
+*LICENSE.txt*
+*Icons*
