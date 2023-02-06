@@ -9,7 +9,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     /// and deleting when user left the room.
     /// </summary>
     private GameObject spawnedPlayerPrefab;
-    public override void OnJoinedLobby()
+    public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
         spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", transform.position, transform.rotation);
