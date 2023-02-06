@@ -4,12 +4,8 @@ using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
-    //public GameObject roomUI;
-    public void Start()
-    {
-        ConnectToServer();
-    }
-
+    public GameObject roomUI;
+    
     /// <summary>
     /// Function that enables user to connect to the server which allow them 
     /// appear to the lobby and choose specific room (laboratory)
@@ -22,13 +18,38 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     /// <summary>
     /// After appearing to the game user appears in lobby
-    /// Lobby is a default room
+    /// Lobby is a default room and the first room in visualization
     /// </summary>
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected To Server.");
         base.OnConnectedToMaster();
+        PhotonNetwork.JoinLobby();
+    }
 
+    /// <summary>
+    /// Enables get into a lobby
+    /// button appers 
+    /// </summary>
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();
+        Debug.Log("We joined a lobby");
+        roomUI.SetActive(true);
+    }
+
+    /// <summary>
+    /// Specific room - laboratory is created. 
+    /// 
+    /// Creating a room is needed before user join room by clicking 
+    /// a button in lobby
+    /// 
+    /// Room has maximal number of players in it;
+    /// is visible or not
+    /// is able to join (is open) or not
+    /// </summary>
+    public void InitializeRoom()
+    {
         RoomOptions roomOptions = new()
         {
             MaxPlayers = 10,
@@ -50,34 +71,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         base.OnPlayerEnteredRoom(newPlayer);
     }
 
-    /// <summary>
-    /// Enables get into a lobby
-    /// button appers 
-    /// </summary>
-    //public override void OnJoinedLobby()
-    //{
-    //    base.OnJoinedLobby();
-    //    Debug.Log("We joined a lobby");
-    //    //roomUI.SetActive(true);
-    //}
+    
 
 
-    /// <summary>
-    /// Specific room - laboratory is created. 
-    /// 
-    /// Creating a room is needed before user join room by clicking 
-    /// a button in lobby
-    /// 
-    /// Room has maximal number of players in it;
-    /// is visible or not
-    /// is able to join (is open) or not
-    /// </summary>
-    //public void InitializeRoom()
-    //{
-
-
-    //    PhotonNetwork.JoinOrCreateRoom("Room 1", roomOptions, TypedLobby.Default);
-    //}
+    
 
 
 
