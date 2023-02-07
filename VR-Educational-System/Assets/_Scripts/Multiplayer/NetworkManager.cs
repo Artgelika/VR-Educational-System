@@ -1,9 +1,19 @@
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class DefaultRoom
+{
+    public string Name;
+    public int sceneIndex;
+    public int maxPlayer;
+}
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public List<DefaultRoom> defaultRooms;
     public GameObject roomUI;
     
     /// <summary>
@@ -48,17 +58,35 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     /// is visible or not
     /// is able to join (is open) or not
     /// </summary>
-    public void InitializeRoom()
+    public void InitializeRoom(int defaultRoomIndex)
     {
-        RoomOptions roomOptions = new()
+        DefaultRoom roomSettings = defaultRooms[defaultRoomIndex];
+
+        // Load scene
+        PhotonNetwork.LoadLevel(roomSettings.sceneIndex);
+
+        // Create a room
+        //RoomOptions roomOptions = new()
+        //{
+        //    MaxPlayers = (byte)roomSettings.maxPlayer,
+        //    IsVisible = true,
+        //    IsOpen = true
+        //};
+
+        RoomOptions roomOptions = CreateRoom(roomSettings);
+
+        PhotonNetwork.JoinOrCreateRoom(roomSettings.Name, roomOptions, TypedLobby.Default);
+    }
+
+    private RoomOptions CreateRoom(DefaultRoom roomSettings)
+        => new()
         {
-            MaxPlayers = 10,
+            MaxPlayers = (byte)roomSettings.maxPlayer,
             IsVisible = true,
             IsOpen = true
         };
-        PhotonNetwork.JoinOrCreateRoom("Room 1", roomOptions, TypedLobby.Default);
-    }
 
+    // public 
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined a Room");
