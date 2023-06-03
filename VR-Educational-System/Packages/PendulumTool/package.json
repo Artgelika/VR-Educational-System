@@ -1,0 +1,19 @@
+{
+  "name": "com.biometr.easy-pendulum-moves-by-itself",
+  "version": "1.0.1",
+  "displayName": "Easy Pendulum moves by itself",
+  "description": "This is an example package",
+  "unity": "2021.3",
+  "unityRelease": "18f1",
+  "documentationUrl": "",
+  "keywords": [
+    "pendulum",
+    "moves-by-itself",
+    "move"
+  ],
+  "author": {
+    "name": "Angelika",
+    "email": "artgelika@gmail.com",
+    "url": "https://www.unity3d.com"
+  }
+}

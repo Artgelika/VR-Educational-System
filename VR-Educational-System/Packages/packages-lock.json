@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.biometr.easy-pendulum-moves-by-itself": {
+      "version": "file:PendulumTool",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.0",
       "depth": 0,
