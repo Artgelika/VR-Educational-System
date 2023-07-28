@@ -26,6 +26,7 @@ on:
  default: ‘’
 jobs:
  tests:
+  - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   name: Test Code Quality
     runs-on: ubuntu-latest
     steps:
