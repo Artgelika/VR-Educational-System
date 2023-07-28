@@ -64,15 +64,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         // Load scene
         PhotonNetwork.LoadLevel(roomSettings.sceneIndex);
-
-        // Create a room
-        //RoomOptions roomOptions = new()
-        //{
-        //    MaxPlayers = (byte)roomSettings.maxPlayer,
-        //    IsVisible = true,
-        //    IsOpen = true
-        //};
-
         RoomOptions roomOptions = CreateRoom(roomSettings);
 
         PhotonNetwork.JoinOrCreateRoom(roomSettings.Name, roomOptions, TypedLobby.Default);
@@ -86,7 +77,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             IsOpen = true
         };
 
-    // public 
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined a Room");
@@ -98,13 +88,4 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("A new player joined the room");
         base.OnPlayerEnteredRoom(newPlayer);
     }
-
-    
-
-
-    
-
-
-
-
 }

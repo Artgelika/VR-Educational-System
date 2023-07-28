@@ -1105,13 +1105,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultRooms:
   - Name: Bio
-    sceneIndex: 1
+    sceneIndex: 2
     maxPlayer: 2
   - Name: Chem
-    sceneIndex: 2
+    sceneIndex: 3
     maxPlayer: 5
   - Name: Phy
-    sceneIndex: 3
+    sceneIndex: 4
     maxPlayer: 10
   roomUI: {fileID: 1342245322}
 --- !u!4 &1132615676
