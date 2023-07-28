@@ -1,0 +1,35 @@
+name: Test, Build, and Deploy with GameCI
+on:
+ push:
+ branches:
+ — develop
+ paths:
+ — ‘Assets/**’
+ — ‘Packages/**’
+ — ‘ProjectSettings/**’
+ pull_request:
+ types:
+ — opened
+ branches:
+ — development
+ paths:
+ — ‘Assets/**’
+ — ‘Packages/**’
+ — ‘ProjectSettings/**’
+ types:
+ — published
+ workflow_dispatch:
+ inputs:
+ workflow_mode:
+ description: ‘[release] [Android, iOS, StandaloneLinux64, WebGL, StandaloneWindows, StandaloneWindows64, WSAPlayer, StandaloneOSX, Steam]’
+ required: false
+ default: ‘’
+jobs:
+ tests:
+  name: Test Code Quality
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
