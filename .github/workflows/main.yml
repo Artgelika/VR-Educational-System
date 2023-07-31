@@ -1,22 +1,7 @@
 name: Build project
 
-on: 
- push:
-  branches:
-    - develop
-  paths:
-    - 'Assets/**'
-    - 'Packages/**'
-    - 'ProjectSettings/**'
- pull_request:
-  types:
-    - opened
-  branches:
-    - development
-  paths:
-    - 'Assets/**'
-    - 'Packages/**'
-    - 'ProjectSettings/**'
+on: [push]
+
 jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
@@ -26,6 +11,10 @@ jobs:
       matrix:
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
+        paths:
+          - 'Assets/**'
+          - 'Packages/**'
+          - 'ProjectSettings/**'
     steps:
       - uses: actions/checkout@v3
         with:
