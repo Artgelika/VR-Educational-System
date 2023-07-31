@@ -12,7 +12,7 @@ on:
   types:
     - opened
   branches:
-    - main
+    - development
   paths:
     - 'Assets/**'
     - 'Packages/**'
