@@ -12,9 +12,9 @@ jobs:
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
         paths:
-          - 'Assets/**'
-          - 'Packages/**'
-          - 'ProjectSettings/**'
+          - 'VR-Educational-System/Assets/**'
+          - 'VR-Educational-System/Packages/**'
+          - 'VR-Educational-System/ProjectSettings/**'
     steps:
       - uses: actions/checkout@v3
         with:
