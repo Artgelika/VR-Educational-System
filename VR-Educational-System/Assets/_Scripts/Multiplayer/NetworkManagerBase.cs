@@ -1,51 +1,24 @@
-using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections.Generic;
+using UnityEngine;
 
-[System.Serializable]
-public class DefaultRoom
-{
-    public string Name;
-    public int sceneIndex;
-    public int maxPlayer;
-}
-
-public class NetworkManager : MonoBehaviourPunCallbacks
+public class NetworkManagerBase : MonoBehaviourPunCallbacks, INetworkManager
 {
     public List<DefaultRoom> defaultRooms;
-    public GameObject roomUI;
-    
-    /// <summary>
-    /// Function that enables user to connect to the server which allow them 
-    /// appear to the lobby and choose specific room (laboratory)
-    /// </summary>
-    public void ConnectToServer()
+
+    public void Awake()
     {
         PhotonNetwork.ConnectUsingSettings();
-        Debug.Log("Try Connect To Server...");
     }
-
     /// <summary>
-    /// After appearing to the game user appears in lobby
-    /// Lobby is a default room and the first room in visualization
+    /// 
     /// </summary>
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected To Server.");
         base.OnConnectedToMaster();
-        PhotonNetwork.JoinLobby();
-    }
-
-    /// <summary>
-    /// Enables get into a lobby
-    /// button appers 
-    /// </summary>
-    public override void OnJoinedLobby()
-    {
-        base.OnJoinedLobby();
-        Debug.Log("We joined a lobby");
-        roomUI.SetActive(true);
+        //PhotonNetwork.JoinLobby();
     }
 
     /// <summary>
@@ -77,15 +50,32 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             IsOpen = true
         };
 
+
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined a Room");
         base.OnJoinedRoom();
     }
 
+    /// <summary>
+    /// Enables get into a lobby
+    /// button appers 
+    /// </summary>
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();
+        Debug.Log("We joined a lobby");
+    }
+
+
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log("A new player joined the room");
         base.OnPlayerEnteredRoom(newPlayer);
+    }
+
+    public override void OnLeftRoom()
+    {
+        base.OnLeftRoom();
     }
 }

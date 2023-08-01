@@ -440,8 +440,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1132615675}
-        m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
+      - m_Target: {fileID: 7059423800351278352}
+        m_TargetAssemblyTypeName: ServerConnection, Assembly-CSharp
         m_MethodName: ConnectToServer
         m_Mode: 1
         m_Arguments:
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7059423799252488949, guid: 8396b3b625615484e9639f08c46b7a16, type: 3}
   m_PrefabInstance: {fileID: 7059423800351278350}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7059423800351278351}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 535beb2d904d49c4db767f170172e038, type: 3}
@@ -3328,7 +3328,7 @@ PrefabInstance:
       objectReference: {fileID: 1342245322}
     - target: {fileID: 7059423799252488949, guid: 8396b3b625615484e9639f08c46b7a16, type: 3}
       propertyPath: defaultRooms.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7059423799252488949, guid: 8396b3b625615484e9639f08c46b7a16, type: 3}
       propertyPath: defaultRooms.Array.data[3].Name
@@ -3356,3 +3356,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8396b3b625615484e9639f08c46b7a16, type: 3}
+--- !u!1 &7059423800351278351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7059423799252488948, guid: 8396b3b625615484e9639f08c46b7a16, type: 3}
+  m_PrefabInstance: {fileID: 7059423800351278350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7059423800351278352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059423800351278351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078aab63803e4c944805d0fb37c1112b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

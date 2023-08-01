@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Labs/PhysicsLab.unity
     guid: dabd4b6594a877740a9a505fdcdc200a
   - enabled: 1
-    path: Assets/Scenes/Cells/BioCells.unity
-    guid: 38f8129c09f4a444d92374c22f040d52
+    path: Assets/Scenes/Cells/BioCell.unity
+    guid: 1ef49624a55bc11478d7995bcd121e94
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4cc92bc15bc506a4882a3e213e3d6dfc, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6d32fb632d557a44f9c48e32173ab722, type: 2}
