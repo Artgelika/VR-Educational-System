@@ -992,6 +992,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 426802287919087600, guid: b42935aa6cf5c7b48a185a888332a4ae, type: 3}
   m_PrefabInstance: {fileID: 481984059}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &503453232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4290133225198800468, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+  m_PrefabInstance: {fileID: 1466044308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1624b029438ab340a11d7fcfd4e52cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567761076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2387,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122992530}
   m_LocalRotation: {x: 0.10424141, y: -0, z: -0, w: 0.994552}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00033190846}
+  m_LocalPosition: {x: 0, y: 0, z: 1.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2385,7 +2396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 11.967, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.015231788, y: -0.00015175343}
+  m_AnchoredPosition: {x: 0, y: 7.06}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122992532
@@ -2910,25 +2921,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539769cd7a2895348befcc55f09704aa, type: 3}
---- !u!1 &1252734230 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756058089297987881, guid: 539769cd7a2895348befcc55f09704aa, type: 3}
-  m_PrefabInstance: {fileID: 1252734229}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1252734231
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252734230}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: bb3b5299c360a16468b87a3854095a03, type: 3}
 --- !u!114 &1285300511 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7407594335969013902, guid: 539769cd7a2895348befcc55f09704aa, type: 3}
@@ -3425,6 +3417,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: TouchPendulum
       objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 503453232}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartThePendulum
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PendulumTouch, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382102837929552106, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4141c8b19e7f1e545b2971e54b6f414a, type: 3}
 --- !u!4 &1466044309 stripped
@@ -3770,7 +3810,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024220484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 94.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.18328999, y: 0.18328999, z: 0.18328999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3781,7 +3821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 12.9, y: -1.3}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 842, y: 630}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2025881434

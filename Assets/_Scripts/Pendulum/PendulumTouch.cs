@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PendulumTouch : MonoBehaviour
 {
-    Quaternion _start, _end;
+
+    private Quaternion _start, _end, _beginning;
+    //private GameObject _ball;
 
     [SerializeField]
     [Range(0.0f, 360.0f)]
@@ -18,17 +20,40 @@ public class PendulumTouch : MonoBehaviour
 
     void Start()
     {
+        //_ball = GameObject.Find("Ball");
+        //_beginning = PendulumRotation(0);
+        //_start = PendulumRotation(_angle);
         _start = PendulumRotation(0);
         _end = PendulumRotation(-_angle);
     }
+    // w starcie wywolanie metody, która wystartuje wahad³o
+    // wzi¹æ GameObject "Ball"
+    // OnTriggerEnter - jak sie dotknie pilki, to wahadlo sie rusza
 
-    void Update()
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    if (collision.gameObject.name == "Ball")
+    //    {
+    //        Debug.Log("Collision in pendulum was detected");
+    //        _startTime += Time.deltaTime;
+    //        transform.rotation = Quaternion.Lerp(_end, _start, (Mathf.Sin(_startTime * _speed + Mathf.PI / 2) + 1.0f) / 2.0f);
+    //    }
+    //}
+
+    public void StartThePendulum()
     {
+        Debug.Log("Collision in pendulum was detected");
         _startTime += Time.deltaTime;
-        // ..
-        // ..
         transform.rotation = Quaternion.Lerp(_end, _start, (Mathf.Sin(_startTime * _speed + Mathf.PI / 2) + 1.0f) / 2.0f);
     }
+    void Update()
+    {
+        StartThePendulum();
+        //_startTime += Time.deltaTime;
+        // ..
+        // ..
+        //transform.rotation = Quaternion.Lerp(_end, _start, (Mathf.Sin(_startTime * _speed + Mathf.PI / 2) + 1.0f) / 2.0f);
+     }
 
     private void OnCollisionEnter(Collision collision)
     {
