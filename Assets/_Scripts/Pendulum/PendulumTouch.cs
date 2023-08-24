@@ -18,6 +18,8 @@ public class PendulumTouch : MonoBehaviour
     [Range(0.0f, 10.0f)]
     private float _startTime = 0.0f;
 
+    public bool IsHoverOvered { get; set; }
+
     void Start()
     {
         //_ball = GameObject.Find("Ball");
@@ -48,17 +50,17 @@ public class PendulumTouch : MonoBehaviour
     }
     void Update()
     {
-        StartThePendulum();
+        if (IsHoverOvered)
+        {
+            StartThePendulum();
+        }
+        
         //_startTime += Time.deltaTime;
         // ..
         // ..
         //transform.rotation = Quaternion.Lerp(_end, _start, (Mathf.Sin(_startTime * _speed + Mathf.PI / 2) + 1.0f) / 2.0f);
      }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-    }
 
     Quaternion PendulumRotation(float angle)
     {
