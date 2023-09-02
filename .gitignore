@@ -70,3 +70,6 @@ crashlytics-build.properties
 *Assets/NotToCommit*
 *FastScriptReload*
 *Resources*
+*Assets\Scenes\Labs\Experiments.unity*
+Assets/Scenes/Labs/Experiments.unity
+Assets/Scenes/Labs/Experiments.unity.meta

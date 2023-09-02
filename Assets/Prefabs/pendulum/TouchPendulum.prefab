@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 173097309573738944}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -352,6 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1624b029438ab340a11d7fcfd4e52cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _angle: 45
+  _speed: 2
+  _startTime: 0
 --- !u!1 &173097311305148221
 GameObject:
   m_ObjectHideFlags: 0
